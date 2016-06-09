@@ -40,6 +40,8 @@ class AppKernel extends Kernel
             new Symfony\Cmf\Bundle\RoutingAutoBundle\CmfRoutingAutoBundle(),
             new Symfony\Cmf\Bundle\ResourceBundle\CmfResourceBundle(),
             new Symfony\Cmf\Bundle\ResourceRestBundle\CmfResourceRestBundle(),
+            new Symfony\Cmf\Bundle\SonataAdminIntegrationBundle\CmfSonataAdminIntegrationBundle(),
+
 
             // language switcher
             new Lunetics\LocaleBundle\LuneticsLocaleBundle(),
