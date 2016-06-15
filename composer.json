@@ -16,12 +16,6 @@
     "autoload-dev": {
         "classmap": [ "app/tests/WebTestCase.php" ]
     },
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "git@github.com:ElectricMaxxx/sonata-admin-integration-bundle.git"
-        }
-    ],
     "require": {
         "php": "^5.5.9|^7.0",
         "symfony/symfony": "^3.0",
@@ -33,9 +27,11 @@
         "incenteev/composer-parameter-handler": "^2.0",
 
         "symfony-cmf/symfony-cmf": "2.0.*",
+        "symfony-cmf/core-bundle": "dev-remove_sonata_admin as 2.0.0",
+        "symfony-cmf/routing-bundle": "dev-remove_sonata_admin as 2.0.0",
         "symfony-cmf/seo-bundle": "dev-remove_sonata_admin",
         "symfony-cmf/routing-auto-bundle": "2.0.*",
-        "symfony-cmf/sonata-admin-integration-bundle":"dev-master",
+        "symfony-cmf/sonata-admin-integration-bundle":"dev-routing_bundle",
 
         "jackalope/jackalope-doctrine-dbal": "1.2.*",
         "jackalope/jackalope-jackrabbit": "1.2.*",

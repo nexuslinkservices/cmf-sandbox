@@ -128,8 +128,12 @@ cmf_resource_rest:
         - { repository: default, enhancer: sonata_admin }
 
 cmf_sonata_admin_integration:
+    dynamic:
+        persistence: phpcr
     bundles:
         seo: ~
+        route:
+          admin_basepath: /cms/routes
 
 sonata_block:
     default_contexts: [cms]
@@ -163,10 +167,10 @@ sonata_admin:
         cmf_menu.admin_extension.menu_options:
             implements:
                 - Symfony\Cmf\Bundle\MenuBundle\Model\MenuOptionsInterface
-        cmf_routing.admin_extension.route_referrers:
+        cmf_sonata_admin_integration.route.extension.route_referrers:
             implements:
                 - Symfony\Cmf\Component\Routing\RouteReferrersInterface
-        cmf_routing.admin_extension.frontend_link:
+        cmf_sonata_admin_integration.route.extension.frontend_link:
             implements:
                 - Symfony\Cmf\Component\Routing\RouteReferrersReadInterface
             extends:
@@ -196,8 +200,8 @@ sonata_admin:
                 label: URLs
                 icon: '<i class="fa fa-link"></i>'
                 items:
-                    - cmf_routing.route_admin
-                    - cmf_routing.redirect_route_admin
+                    - cmf_sonata_admin_integration.route.admin
+                    - cmf_sonata_admin_integration.route.redirect_route_admin
             menu:
                 label: Menu
                 icon: '<i class="fa  fa-bars"></i>'
