@@ -16,6 +16,9 @@
     "autoload-dev": {
         "classmap": [ "app/tests/WebTestCase.php" ]
     },
+    "repositories": [
+        { "type": "vcs", "url": "https://github.com/WouterJ/jms-serializer" }
+    ],
     "require": {
         "php": "^5.5.9|^7.0",
         "symfony/symfony": "^3.0",
@@ -43,6 +46,7 @@
         "sonata-project/translation-bundle": "^2.0",
 
         "jms/serializer-bundle": "^1.1",
+        "jms/serializer": "dev-patch-1 as 1.0.1",
         "friendsofsymfony/rest-bundle": "~1.7",
         "eko/feedbundle": "^1.2.7",
         "lunetics/locale-bundle": "^2.5",
